@@ -6,11 +6,11 @@ adafruit-blinka-neopixel-pi5
 | pip builds           | [![Pip Actions Status][actions-pip-badge]][actions-pip-link] |
 | [`cibuildwheel`][]   | [![Wheels Actions Status][actions-wheels-badge]][actions-wheels-link] |
 
-[actions-badge]:           https://github.com/adafruit/adafruit-blinka-neopixel-pi5/workflows/Tests/badge.svg
-[actions-pip-link]:        https://github.com/adafruit/adafruit-blinka-neopixel-pi5/actions?query=workflow%3A%22Pip
-[actions-pip-badge]:       https://github.com/adafruit/adafruit-blinka-neopixel-pi5/workflows/Pip/badge.svg
-[actions-wheels-link]:     https://github.com/adafruit/adafruit-blinka-neopixel-pi5/actions?query=workflow%3AWheels
-[actions-wheels-badge]:    https://github.com/adafruit/adafruit-blinka-neopixel-pi5/workflows/Wheels/badge.svg
+[actions-badge]:           https://github.com/adafruit/Adafruit_Blinka_Raspberry_Pi5_Neopixel/workflows/Tests/badge.svg
+[actions-pip-link]:        https://github.com/adafruit/Adafruit_Blinka_Raspberry_Pi5_Neopixel/actions?query=workflow%3A%22Pip
+[actions-pip-badge]:       https://github.com/adafruit/Adafruit_Blinka_Raspberry_Pi5_Neopixel/workflows/Pip/badge.svg
+[actions-wheels-link]:     https://github.com/adafruit/Adafruit_Blinka_Raspberry_Pi5_Neopixel/actions?query=workflow%3AWheels
+[actions-wheels-badge]:    https://github.com/adafruit/Adafruit_Blinka_Raspberry_Pi5_Neopixel/workflows/Wheels/badge.svg
 
 Installation
 ------------
@@ -18,11 +18,11 @@ Installation
 Installing from source:
 
  - clone this repository
- - `pip install ./adafruit-blinka-neopixel-pi5`
+ - `pip install ./Adafruit_Blinka_Raspberry_Pi5_Neopixel`
 
-Installing from pip (not yet available):
+Installing from pip:
 
- - `pip install adafruit-blinka-neopixel-pi5`
+ - `pip install Adafruit-Blinka-Raspberry-Pi5-Neopixel`
 
 Building the documentation
 --------------------------
@@ -33,7 +33,7 @@ the extension module to generate beautiful documentation in a variety formats.
 The following command generates HTML-based reference documentation; for other
 formats please refer to the Sphinx manual:
 
- - `cd adafruit-blinka-neopixel-pi5/docs`
+ - `cd Adafruit_Blinka_Raspberry_Pi5_Neopixel/docs`
  - `make html`
 
 License

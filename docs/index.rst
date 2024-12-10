@@ -6,4 +6,4 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   neopixel_write_pi5
+   adafruit_raspberry_pi5_neopixel_write

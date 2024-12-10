@@ -1,12 +1,14 @@
 import adafruit_pixelbuf
 import board
-import neopixel_write_pi5
 from adafruit_led_animation.animation.rainbow import Rainbow
 from adafruit_led_animation.animation.rainbowchase import RainbowChase
 from adafruit_led_animation.animation.rainbowcomet import RainbowComet
 from adafruit_led_animation.animation.rainbowsparkle import RainbowSparkle
 from adafruit_led_animation.sequence import AnimationSequence
+from adafruit_raspberry_pi5_neopixel_write import neopixel_write
 
+NEOPIXEL = board.D13
+num_pixels = 96
 
 class Pi5Pixelbuf(adafruit_pixelbuf.PixelBuf):
     def __init__(self, pin, size, **kwargs):
@@ -14,9 +16,9 @@ class Pi5Pixelbuf(adafruit_pixelbuf.PixelBuf):
         super().__init__(size=size, **kwargs)
 
     def _transmit(self, buf):
-        neopixel_write_pi5.neopixel_write(self._pin, buf)
+        neopixel_write(self._pin, buf)
 
-pixels = Pi5Pixelbuf(board.D13, 120, auto_write=True, byteorder="WBGR")
+pixels = Pi5Pixelbuf(NEOPIXEL, num_pixels, auto_write=True, byteorder="BGR")
 
 rainbow = Rainbow(pixels, speed=0.02, period=2)
 rainbow_chase = RainbowChase(pixels, speed=0.02, size=5, spacing=3)
@@ -33,9 +35,5 @@ animations = AnimationSequence(
     auto_clear=True,
 )
 
-try:
-    while True:
-        animations.animate()
-finally:
-    pixels.fill(0)
-    pixels.show()
+while True:
+    animations.animate()
