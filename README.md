@@ -1,5 +1,5 @@
-adafruit-blinka-neopixel-pi5
-============================
+Adafruit-Blinka-Raspberry-Pi5-Neopixel
+======================================
 
 |      CI              | status |
 |----------------------|--------|
@@ -24,6 +24,15 @@ Installing from pip:
 
  - `pip install Adafruit-Blinka-Raspberry-Pi5-Neopixel`
 
+System setup
+------------
+
+If `ls -l /dev/pio0` reports that the file is not found, you may need to update your Pi 5 firmware to one with PIO support and make sure that you are running a suitably recent kernel. If `ls -l /dev/pio0` reports that the file is owned by root and group root, you should add the following to /etc/udev/rules/99-com.rules:
+
+```
+SUBSYSTEM=="*-pio", GROUP="gpio", MODE="0660"
+```
+
 Building the documentation
 --------------------------
 
@@ -39,7 +48,7 @@ formats please refer to the Sphinx manual:
 License
 -------
 
-adafruit-blinka-neopixel-pi5 is provided under the GPL-2-only license that can be found in the LICENSE
+Adafruit\_Blinka\_Raspberry\_Pi5\_Neopixel is provided under the GPL-2-only license that can be found in the LICENSE
 file. By using, distributing, or contributing to this project, you agree to the
 terms and conditions of this license.
 
