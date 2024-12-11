@@ -1,3 +1,5 @@
+import time
+
 import adafruit_pixelbuf
 import board
 from adafruit_led_animation.animation.rainbow import Rainbow
@@ -35,5 +37,10 @@ animations = AnimationSequence(
     auto_clear=True,
 )
 
-while True:
-    animations.animate()
+try:
+    while True:
+        animations.animate()
+finally:
+    time.sleep(.02)
+    pixels.fill(0)
+    pixels.show()
